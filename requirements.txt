@@ -1,0 +1,8 @@
+## requirement packages
+sklearn
+pandas
+scikit-learn
+numpy
+streamlit
+streamlit-option-menu
+Pillow
