@@ -70,7 +70,7 @@ if (selected == "Frailty Classification Using Machine Learning Model"):
         else:
             HT = 0
         
-        if exhaustion_choices == 'ไม่ใช่':
+        if exhaustion_choices == 'ไม่เลย' or exhaustion_choices == 'นานๆ ครั้ง (1-2 วัน/สัปดาห์)':
             exhaustion_choices = 0
         else:
             exhaustion_choices = 1
@@ -91,7 +91,9 @@ if (selected == "Frailty Classification Using Machine Learning Model"):
         HT = st.selectbox('ได้รับการวินิจฉัยโรคความดันโลหิตสูง', ['ไม่ใช่', 'ใช่'])
         DLP = st.selectbox('ได้รับการวินิจฉัยโรคไขมันในเลือดสูง', ['ไม่ใช่', 'ใช่'])
         st.write("ความรู้สึกอ่อนล้าทางกาย")
-        exhaustion_choices = st.selectbox('ท่านมักจะมีความรู้เหนื่อยล้าเป็นประจำใช่หรือไม่?', ['ไม่ใช่', 'รู้สึกเป็นบางครั้ง (1-2 วัน/สัปดาห์)','รู้สึกบ่อยครั้ง (3-4 วัน/สัปดาห์)', 'เป็นประจำทุกวัน'])
+        st.write("1. ฉันรู้สึกว่าทุกอย่างที่ฉันทำต้องใช้พยายามเป็นอย่างมาก")
+        st.write("2. ฉันไม่สามารถเคลื่อนที่ได้")
+        exhaustion_choices = st.selectbox('ในช่วง 1 สัปดาห์ที่ผ่านมาคุณมีความรู้สึกเช่นนี้บ่อยครั้งหรือไม่?', ['ไม่เลย', 'นานๆ ครั้ง (1-2 วัน/สัปดาห์)','บ่อยๆ (3-4 วัน/สัปดาห์)', 'ตลอดเวลา'])
 
         if st.form_submit_button('พยากรณ์ความเสี่ยงของภาวะเปราะบางทางกายภาพ'):
             
