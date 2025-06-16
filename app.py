@@ -17,7 +17,7 @@ with open('logistic_model_frailty.pkl', 'rb') as model_file:
 
 # Loading banner and button image
 image = Image.open('./images/app_banner.png')
-st.image(image, use_column_width ="always" )
+st.image(image, use_container_width ="always" )
 
 logo = './images/slidebar_button.png'
 
